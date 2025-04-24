@@ -1,447 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil Profesional - Erick Cruz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --background: #ffffff;
+      --text: #333333;
+      --accent: #f0f8ff;
+    }
 
-    <title>Erick Cruz - Portafolio</title>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
-    <link rel="stylesheet" href="assets/css/owl.css" />
-    <link rel="stylesheet" href="assets/css/lightbox.css" />
-  </head>
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
 
-  <body>
-    <div id="page-wraper">
-      <!-- Sidebar Menu -->
-      <div class="responsive-nav">
-        <i class="fa fa-bars" id="menu-toggle"></i>
-        <div id="menu" class="menu">
-          <i class="fa fa-times" id="menu-close"></i>
-          <div class="container">
-            <div class="image">
-              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
-            </div>
-            <div class="author-content">
-              <h4>Erick Cruz</h4>
-              <span>Ingeniero de Sistemas Inform&aacute;ticos</span>
-            </div>
-            <nav class="main-nav" role="navigation">
-              <ul class="main-menu">
-                <li><a href="#section1">Sobre mi</a></li>
-                <li><a href="#section2">Habilidades</a></li>
-                <li><a href="#section3">Mi Trabajo</a></li>
-                <li><a href="#section4">Contacto</a></li>
-              </ul>
-            </nav>
-            <div class="social-network">
-              <ul class="soial-icons">
-                <li>
-                  <a href="https://www.facebook.com/ESCM1990" target="_blank"><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/Escm1990" target="_blank"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/escm1990/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                </li>
-                <li>
-                  <a href="https://fragmentosdecodigo.home.blog/" target="_blank"><i class="fa fa-wordpress"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright-text">
-              <p></p>
-            </div>
-          </div>
+    header h1, header p {
+      font-family: 'Roboto Slab', serif;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      background: var(--accent);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-text {
+      flex: 1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #0b5ed7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--accent);
+      color: var(--text);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+      .card {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/images/author-image.jpg" alt="Imagen de perfil" />
+    <h1>Erick Cruz</h1>
+    <p>Desarrollador PL/SQL y Oracle Forms & Reports | Aspirante a desarrollador Android</p>
+    <p id="experiencia"></p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Sobre mí</h2>
+      <p>Programador con experiencia desde 2014 en entornos Oracle y proyectos móviles. Me apasiona escribir, aprender tecnologías nuevas y crear soluciones funcionales.</p>
+    </section>
+
+    <section>
+        <h2>🧠 Habilidades Técnicas</h2>
+      
+        <div>
+          <h3>💡 Lenguajes que uso para construir soluciones</h3>
+          <p>Me siento cómodo escribiendo código en estos lenguajes, según el proyecto y la necesidad:</p>
+          <ul>
+            <li>PL/SQL</li>
+            <li>Java</li>
+            <li>Kotlin</li>
+            <li>Python</li>
+            <li>JavaScript (básico)</li>
+          </ul>
+        </div>
+      
+        <div>
+          <h3>🗄️ Bases de datos con las que he trabajado</h3>
+          <p>Tengo experiencia trabajando directamente con datos en diferentes motores:</p>
+          <ul>
+            <li>Oracle Database</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>MongoDB (nivel básico)</li>
+          </ul>
+        </div>
+      
+        <div>
+          <h3>🛠️ Herramientas y entornos que manejo</h3>
+          <p>Estas son las herramientas y frameworks que he utilizado para desarrollar, mantener y entregar proyectos:</p>
+          <ul>
+            <li>Oracle Forms & Reports</li>
+            <li>Oracle APEX</li>
+            <li>Android Studio</li>
+            <li>Spring Boot</li>
+            <li>Angular (nivel básico)</li>
+            <li>HTML5 y CSS3</li>
+            <li>Edición de audio y video (Camtasia, Audacity)</li>
+          </ul>
+        </div>
+      </section>      
+
+    <section>
+      <h2>Proyectos Destacados</h2>
+      <div class="card">
+        <div class="card-text">
+          <strong>Desarrollos institucionales con Oracle Forms & Reports</strong><br>
+          Participación en múltiples proyectos de desarrollo y mantenimiento de sistemas administrativos y financieros en entornos Oracle. Desarrollo de formularios complejos, reportes y optimización de consultas PL/SQL para instituciones públicas y privadas.
         </div>
       </div>
-
-      <section class="section about-me" data-section="section1">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Sobre mi</h2>
-            <div class="line-dec"></div>
-            <span>Mi experiencia se basa en desarrollo de aplicaciones basadas en Oracle Developer 6i, 10g y 11g, aplicaciones web basadas en Oracle Apex (4.2.6 y 5.x) para soluciones empresariales. 
-              He dado soporte a aplicativos Java Struts 1.x. Actualmente incursiono en desarrollo en PL/SQL</span>
-              <br><br><span>
-                En mis ratos libres me gusta programar aplicaciones m&oacute;viles basadas en Android, aprender sobre SpringBoot y Angular, y escribir blogs. Cuento con un blog de programaci&oacute;n llamado <a href="https://fragmentosdecodigo.home.blog/" target="_blank">"Fragmentos de C&oacute;digo"</a> en el que redacto parte de lo que aprendo.
-                </span>
-              <br><br><span>
-                Mi objetivo es el desarrollo como persona y profesional, aportando mis conocimientos y experiencia para sacar adelante proyectos y desarrollos de software.
-              </span>
-          </div>
-          <div class="left-image-post">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/left-image.jpg" alt="" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-text">
-                  <h4>Mi experiencia</h4>
-                  <p>
-                    M&aacute;s de 7 a&ntilde;os de experiencia laboral, he tenido la oportunidad de trabajar en rubros bancarios y comerciales. 
-                    Tambi&eacute;n he desarrollado m&oacute;dulos para casas de empe&ntilde;o, inventarios, activos fijos, RRHH.
-                  </p>
-                  <p>
-                    Mi actual funci&oacute;n se basa en el desarrollo de objetos PL/SQL para el desarrollo de ETL para DataWarehouse.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-            <div class="right-image-post">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="left-text">
-                    <h4>"Nunca dejes de aprender"</h4>
-                    <p>
-                      A pesar de no tener una experiencia laboral en el &aacute;rea, tengo conocimientos de programaci&oacute;n en lenguaje para dispositivos Android.
-                    </p>
-                    <p>
-                      Tambi&eacute;n he hecho API Rest con SpringBoot como Backend y Angular versiones 10 y 11 para frontend. Espero formarme en estas tecnolog&iacute;as para llegar a ser un programador Fullstack.
-                    </p>
-                    <p>
-                      <cite>"Cuanto m&aacute;s vivo, m&aacute;s aprendo. Cuanto m&aacute;s aprendo, m&aacute;s me doy cuenta de lo poco que s&eacute;." (Michel Legrand)</cite>
-                    </p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-image">
-                  <img src="assets/images/right-image.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <div class="card-text">
+          <strong>Aplicaciones móviles Android</strong><br>
+          Desarrollo y publicación de apps en Google Play utilizando principalmente Java y Kotlin. Las aplicaciones abordan necesidades educativas y de productividad personal.<br>
+          <a href="https://play.google.com/store/apps/dev?id=9131733273342902095" target="_blank">Ver en Play Store</a>
         </div>
-      </section>
-
-      <section class="section my-services" data-section="section2">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Habilidades</h2>
-            <div class="line-dec"></div>
-            <span> A lo largo de los a&ntilde;os me he formado en diversas &aacute;reas del desarrollo de software. </span>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="second-service-icon service-icon"></div>
-                <h4>Desarrollo Web</h4>
-                <p>
-                  Tecnolog&iacute;as como HTML5, CSS3, Javascript, TypeScript, Bootstrap, jQuery. Aplicaciones web con Oracle Apex versiones 4 y 5.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <h4>Oracle</h4>
-                <p>
-                  Oracle Developer Forms & Reports 6i/11g. Bases de datos 10g, 11g, 12c, 18c y 19c. PL/SQL, optimizaci&oacute;n de consultas, ETL, XML. Toad for Oracle y SQL Developer.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="third-service-icon service-icon"></div>
-                <h4>Java / Android</h4>
-                <p>
-                  Java 8 y 11. POO, frameworks como Struts, JSP, JSF, JPA, Hibernate y SpringBoot. Dependencias Maven, Gradle y ANT. Retrofit para consumo de API REST. JDBC, iReport / Jasper Reports.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="fourth-service-icon service-icon"></div>
-                <h4>Otros</h4>
-                <p>NetBeans, Eclipse, IBM RAD7, Android Studio, Visual Studio, VSCode, Intelij Idea, Spring Tools Suite 4. GitLab/GitHub, JSON, Firebase, Firestone, Glassfish 5.0, WebSphere 6, Tomcat, XAMPP, Python, MongoDB, PostgreSQL.
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="card">
+        <div class="card-text">
+          <strong>Soporte técnico y atención a usuarios finales</strong><br>
+          Experiencia brindando soporte en el uso de sistemas desarrollados en Oracle Forms, corrección de errores en tiempo real y mejora de la experiencia del usuario final.
         </div>
-      </section>
-
-      <section class="section my-work" data-section="section3">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Mi Trabajo</h2>
-            <div class="line-dec"></div>
-            <span
-              >Un resumen de mis proyectos m&aacute;s destacados.</span
-            ><br><br>
-            <span> Presiona cada imagen o para m&aacute;s detalle (m&aacute;s informaci&oacute;n en perfil de Linkedin).</span>
-          </div>
-          <div class="row">
-            <div class="isotope-wrapper">
-              
-              <div class="isotope-box">
-                <div class="isotope-item" data-type="nature">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-01.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-01.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ></a>
-                      <h4>Instructor de Computaci&oacute;n</h4>
-                      <span>Ense&ntilde;anza de informática b&aacute;sica, Microsoft Office, dise&ntilde;o de p&aacute;ginas web, mantenimiento y reparaci&oacute;n de PC, diseño de imágenes, redes sociales, e-commerce, etc..</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="people">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-02.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-02.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ></a>
-                      <h4>Desarrollador Analista Senior I</h4>
-                      <span>Desarrollo de aplicativos basados en Oracle Forms & Reports, PL/SQL y Oracle Apex.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="animals">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-03.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-03.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ></a>
-                      <h4>Sistema COVA</h4>
-                      <span>Elaborado en Oracle Forms & Reports 11g. Diseño y desarrollo de software para el c&aacute;lculo autom&aacute;tico de pago de bonificaciones y comisiones variables mensuales y trimestrales para uno de los peri&oacute;dicos de mayor circulaci&oacute;n. </span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="people">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-04.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-04.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ></a>
-                      <h4>Sistema de Administraci&oacute;n de Fideicomisos</h4>
-                      <span>Proyecto hecho en Oracle Forms 11g. Galardonado como el mejor proyecto del a&ntilde;o 2019 en uno de los bancos m&aacute;s importante de El Salvador.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="nature">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-05.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-05.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ></a>
-                      <h4>Las Buenas Nuevas</h4>
-                      <span>Aplicaci&oacute;n m&oacute;vil en Android desarrollada para iglesia local. M&oacute;dulos de YouTube, Contacto, Blog, Redes Sociales entre otras.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="animals">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-06.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-06.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ></a>
-                      <h4>Visor de Documentos</h4>
-                      <span>Sitio web desarrollador en Angular 10 para visualizaci&oacute;n de documentos digitalizados con la finalidad de brindar consulta &aacute;gil de informaci&oacute;n en las agencias de entidades bancarias.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="card">
+        <div class="card-text">
+          <strong>Diseño web, contenidos y edición multimedia</strong><br>
+          Desarrollo de sitios web con HTML y CSS, edición de videos y audio, y gestión de redes sociales para promoción de contenido educativo y cristiano.
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section contact-me" data-section="section4">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Contacto</h2>
-            <div class="line-dec"></div>
-            <span
-              >Si desea ponerse en contacto conmigo, por favor llene el siguiente formulario y con gusto me estar&eacute; comunicando en la brevedad posible.</span
-            >
-          </div>
-          <div class="row">
-            <div class="right-content">
-              <div class="container">
-                <form id="contact" action="" method="post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="name"
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="Nombre"
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="email"
-                          type="text"
-                          class="form-control"
-                          id="email"
-                          placeholder="Email"
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input
-                          name="subject"
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          placeholder="Tema"
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea
-                          name="message"
-                          rows="6"
-                          class="form-control"
-                          id="message"
-                          placeholder="Mensaje"
-                          required=""
-                        ></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Enviar mensaje
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <section>
+      <h2>Objetivo Profesional</h2>
+      <p>Convertirme en desarrollador Android profesional remoto, reforzando mis habilidades móviles e inglés para obtener oportunidades en el extranjero.</p>
+    </section>
 
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <section>
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+            <input type="hidden" name="form-name" value="contacto" />
+            <p hidden>
+              <label>No llenar esto: <input name="bot-field" /></label>
+            </p>
+            
+            <input type="text" name="name" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu email" required>
+            <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+          </form>
+      <p>GitHub: <a href="https://github.com/escm1990" target="_blank">github.com/escm1990</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/escm1990" target="_blank">linkedin.com/in/escm1990</a></p>
+    </section>
+  </div>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script>
-      //according to loftblog tut
-      $(".main-menu li:first").addClass("active");
+  <footer>
+    <p>&copy; <span id="anio"></span> Erick Cruz. Todos los derechos reservados.</p>
+  </footer>
 
-      var showSection = function showSection(section, isAnimate) {
-        var direction = section.replace(/#/, ""),
-          reqSection = $(".section").filter(
-            '[data-section="' + direction + '"]'
-          ),
-          reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $("body, html").animate(
-            {
-              scrollTop: reqSectionPos
-            },
-            800
-          );
-        } else {
-          $("body, html").scrollTop(reqSectionPos);
-        }
-      };
-
-      var checkSection = function checkSection() {
-        $(".section").each(function() {
-          var $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var currentId = $this.data("section"),
-              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-            reqLink
-              .closest("li")
-              .addClass("active")
-              .siblings()
-              .removeClass("active");
-          }
-        });
-      };
-
-      $(".main-menu").on("click", "a", function(e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-      });
-
-      $(window).scroll(function() {
-        checkSection();
-      });
-    </script>
-  </body>
+  <script>
+    const inicio = 2014;
+    const hoy = new Date();
+    const anioActual = hoy.getFullYear();
+    const experiencia = anioActual - inicio;
+    document.getElementById("experiencia").innerText = `Con ${experiencia} años de experiencia en desarrollo desde 2014.`;
+    document.getElementById("anio").innerText = anioActual;
+  </script>
+</body>
 </html>
